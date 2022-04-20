@@ -1,0 +1,279 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, change you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+
+//
+// Bring in Bootstrap
+//
+
+// Option 1
+//
+// Import all of Bootstrap's CSS
+
+//@import "bootstrap/scss/bootstrap";
+
+// Option 2
+//
+// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
+
+// Toggle global options
+$enable-gradients: true;
+$enable-shadows: true;
+
+// Customize some defaults
+$body-color: #ffffff;
+$body-bg: #2E2E2E;
+$border-radius: .4rem;
+$success: #00ACEE;
+$active-color: #00ACEE;
+
+// icons
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+
+// font 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
+
+// other
+@import "bootstrap/scss/functions"; // Required
+@import "bootstrap/scss/variables"; // Required
+@import "bootstrap/scss/mixins"; // Required
+
+@import "bootstrap/scss/root"; // Required
+@import "bootstrap/scss/reboot"; // Required
+@import "bootstrap/scss/type";
+// @import "bootstrap/scss/images";
+// @import "bootstrap/scss/code";
+@import "bootstrap/scss/grid";
+// @import "bootstrap/scss/tables";
+// @import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+
+// @import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+// @import "bootstrap/scss/input-group"; // Requires forms
+// @import "bootstrap/scss/custom-forms";
+// @import "bootstrap/scss/nav";
+// @import "bootstrap/scss/navbar"; // Requires nav
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/jumbotron";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/media";
+// @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/utilities";
+// @import "bootstrap/scss/print";
+
+
+//
+// Custom styles
+//
+@import "animations.scss";
+@import "icon-list";
+
+body {
+  padding: 3rem 1.5rem;
+  background-color: $body-bg;
+  color: $body-color;
+  font-family: 'IBM Plex Mono', serif;
+
+  h2 {
+    font-weight: 600;
+  }
+
+  p {
+    font-weight: 400;
+  }
+
+  ::placeholder {
+    color: #DCDCDC;
+    opacity: 1;
+    padding-left: 10px;
+  }
+
+  .btn-outline-primary {
+    color: $active-color;
+    border-color: $active-color;
+  }
+
+  .btn-primary {
+    background: none;
+    border-color: $active-color;
+    color: $active-color;
+  }
+}
+
+// Style Bootstrap icons
+.bi {
+  fill: $body-color;
+}
+
+// some spacing styles
+.mr-auto {
+  margin: 0 auto !important;
+}
+
+.ml-1 {
+  margin-left: ($spacer * .25) !important;
+}
+
+.px-2 {
+  padding-left: ($spacer * .5) !important;
+  padding-right: ($spacer * .5) !important;
+}
+
+.p-3 {
+  padding: $spacer !important;
+}
+
+// first screen 
+.container {
+  .logo {
+    font-size: 48px;
+    padding-bottom: 5em;
+
+    a {
+      color: $body-color;
+    }
+
+    a:hover {
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  .btn {
+    font-size: 24px;
+    border: 2px solid $active-color;
+    padding: 0.7em;
+    margin: 3em;
+    color: $active-color;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .btn:hover {
+    color: $body-color;
+  }
+
+  .scroll {
+    margin-top: 4em;
+
+    i {
+      font-size: 4em;
+    }
+  }
+}
+
+// second screen
+
+.container-md {
+  .title {
+    margin-top: 3em;
+    padding-bottom: 2em;
+
+    h2 {
+      color: #00ACEE;
+    }
+  }
+  
+  .subTitle {
+    padding-bottom: 1em;
+  }
+
+  .moreBtn a {
+    margin-top: 2em;
+  }
+}
+
+
+// third screen
+
+.stack {
+  margin-top: 10em;
+
+  .left {
+
+    .title {
+      color: $active-color;
+    }
+
+    .subTitle {
+      padding-top: 1em;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+  .right img {
+    width: 20em;
+    height: 7em;
+  }
+}
+
+// fourth screen
+.container-lg {
+  margin-top: 10em;
+  .form {
+
+    .title {
+      color: $active-color;
+    }
+
+    input {
+      background-color: #4F4F4F;
+      color: #fff;
+      width: 100%;
+      margin-top: 1.5em;
+      height: 35px;
+      border: 0;
+    }   
+
+    .messageInp input {
+      height: 80px;
+      margin-bottom: 1em;
+    }
+
+    .submitBtn {
+      margin: 0 auto;
+    }
+  }
+  
+  .map {
+    #map { 
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%; 
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .map {
+      margin-top: 5em;
+    }
+  }
+}
