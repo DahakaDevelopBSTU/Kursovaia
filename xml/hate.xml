@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<courses
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<whraper>
+    <containerHeader>
+        <greetings>Hello, I'm Savenia Aleksei</greetings>
+        <specialities>Student, Front end developer, Freelancer</specialities>
+    </containerHeader>
+
+    <articleContainer>
+        <nameOfPortfolio>My Portfolio</nameOfPortfolio>
+            <firstProj>Figma UI Portfolio Design</firstProj>
+            <secondProj>HTML CSS Website</secondProj>
+            <thirdProj>UI landing page design</thirdProj>
+            <fourthProj>shopify website</fourthProj>
+            <fifthProj>wordpress website</fifthProj>
+            <sixthProj>portfolio html css landing page</sixthProj>
+    </articleContainer>
+
+    <informationalArticle>
+        <textBlock>I'm a web developer based in Belarusian capital — Minsk. I've already worked as a system administrator in private company. Completed more then 40 projects on Upwork. Have knowledge about the principals of browser actions, engines and many other exciting technologies! My hobbies are assembling and repairing of personal computers, engineering technologies and other.
+
+My passion is frontend. Create a vision part of websites. I have tried php, but there was no really respectful experience ^).
+
+Now I'm not working and staying in the status of active work searching</textBlock>
+    </informationalArticle>
+
+    <bottomBlock>
+        <informationalBlock>I'm interested in work with interested people. As a frontend developer, I’ll help you to stand out of the digital world. I’m sure that combination of my passion and your vision will show a great result.</informationalBlock>
+    </bottomBlock>
+</whraper>
